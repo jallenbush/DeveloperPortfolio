@@ -1,0 +1,102 @@
+<! -- loads the static file -->
+<! -- create a home(html)page w/in template folder w/in website directory -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+body {
+  background-color: #013026; 
+}
+
+.title {
+  font-family: "garamond", sans-serif;
+  text-align: center;
+  color: #014760;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  letter-spacing: 1px;
+  line-height:2;
+ 
+}
+h1 {
+  background-image: url("{% static 'website/images/space-cloud.gif' %}");
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 100px;
+  margin: 10px 0;
+  padding-left: 50%;
+  position: relative;
+  animation: slide 5s infinite;
+  animation-iteration-count: 1;
+ 
+}
+#name {animation-timing-function: linear;}
+
+@keyframes slide{
+  from {left: -100px;}
+  to {left: 0px;}
+}
+
+h2 {
+  background-image: url("{% static 'website/images/space-cloud.gif' %}");
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 30px;
+  margin: 10px 0;
+  padding-left: 53%;
+  animation: blink 2s infinite;
+  animation-delay: 3s;
+}
+@keyframes blink{
+	55%{color: #414a4c}
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #107e57;
+  border-radius: 3px;
+  color: #014760;
+  transition: .35s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "garamond";
+}
+
+.white-mode:hover {
+  background-color: #014760;
+  color: #107e57;
+}
+
+</style>
+
+<body>
+  <div class="title">
+		<h1 class="name">Jassmon<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allen</h1>
+		<h2>Jr. Software Developer</h2>
+  </div>
+</body>
+</head>
+</html>
+
+{% endblock %} 

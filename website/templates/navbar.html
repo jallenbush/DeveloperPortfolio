@@ -1,0 +1,134 @@
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "garamond", sans-serif;  
+}
+.sidenav {
+  height: 100%;
+  width: 115px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0e1111;
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-right: 10px;
+  text-align: center;
+  text-indent: -10px;
+}
+
+.sidenav a {
+  padding: 6px -8px 6px 16px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: garamond;
+  color: paleturquoise;
+  display: block;
+
+}
+.sidenav img{
+  margin: auto;
+  width: 55px;
+  height: 55px; 
+  border-radius: 5px 5px; 
+}
+.sidenav img:hover{
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: 10;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sidenav a:hover {
+  background-color: transparent;
+  color: ghostwhite;
+}
+/* Add a white background color to the active link */
+.navbar a.active {
+  background-color: ghostwhite;
+  color: white;
+}
+
+.main {
+  margin-left: 115px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.button {
+  border-radius: 4px;
+  background-color: none;
+  border: none;
+  color: #414a4c;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px; 
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: center;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <header>
+    <img src="{% static 'website/images/cute_cats.gif' %}" align="middle">
+  </header>
+  <a class="button" style="width: 80px; height: 40px; padding-left: 10px;" href="{% url 'home' %}"><span>Home</span></a>
+  <a class="button" style="width: 80px; height: 40px; padding-left: 10px" href="{% url 'about' %}"><span>About</span></a>
+  <a class="button" style="width: 80px; height: 40px; padding-left: 10px" href="{% url 'resume' %}"><span>Resume</span></a>
+  <a class="button" style="width: 80px; height: 40px; padding-left: 10px" href="{% url 'portfolio' %}"><span>Portfolio</span></a>
+  <a class="button" style="width: 80px; height: 40px; padding-left: 10px" href="{% url 'contact' %}"><span>Contact</span></a>
+</div>
+</body>
+</html> 
+
+{% endblock %}

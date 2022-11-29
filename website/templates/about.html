@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	
+.cssload-loader {
+	width: 244px;
+	height: 50px;
+	line-height: 49px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+	font-family: garamond, sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size:40px;
+	color: paleturquoise;
+	letter-spacing: 0em;
+}
+.cssload-loader::before, .cssload-loader::after {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 20px;
+	background: #414a4c;
+	position: absolute;
+	animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-o-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-ms-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-webkit-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-moz-animation: cssload-load 0.81s infinite alternate ease-in-out;
+}
+.cssload-loader::before {
+	top: 0;
+}
+.cssload-loader::after {
+	bottom: 0;
+}
+
+@keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
+body{
+	margin: auto;
+	position: relative;
+	left: 30px;
+}
+
+</style>
+<h1 style="font-family: garamond;">
+	<div class="cssload-loader">about</div></h1><br><br>
+
+<body>	
+    <table id="about" border="0" width="100%"
+        cellpadding="0" cellspacing="0" bgcolor="transparent">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15"
+                    cellspacing="0" width="80%" align="center">
+                    <tr>
+                        <td height="100" align="center"
+                            valign="middle" colspan="2">
+                            <font face="garamond" size="6"
+                                color="#afeeee">
+                                Hello 
+                            </font>
+                            <hr color="#afeeee" width="90">
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td width="40%">
+                            <img src="{% static 'website/images/headshot.jpg' %}" style="height: 470px; border-radius: 2px;">
+                        </td>
+ 
+                        <td width="60%" align="center">
+                            <font face="garamond" size="4"
+                                color="#afeeee">
+                                I'm Jassmon Allen, recent computer science graduate from Sam Houston State University. While attending, I completed relevant computer science courses like data structures & algorithms, database management systems, software engineering, computer architecture, and operating systems. Post college, to better refine both my soft and technical skills, I undertook dozens of beginner to intermediate projects. These projects ranged from small, rudimentary 2D games to dynamic web and software applications.
+                                <hr color="#414a4c">
+                                I have experience with working with both frontend and backend tools, as well as object-oriented programing languages. This technical skill set includes, but is not limited to Python, Java, Django, Bootstrap, MySQL, HTML5, CSS, JavaScript, and clouding platforms like Heroku and AWS. In my free time, I indulge in my love of puzzles by building and/or breaking down physical 3D models.
+                                <hr color="#414a4c">
+                                My passion for learning new and challenging things has also led me to continuously expand my technical knowledge by staying updated on the latest tech concepts and tools. I’m seeking to utilize my background in computer science and my passion for learning to succeed in an entry level software developer role. Upon hiring me, you will get a self-motivated team member that is dedicated to advancing and fulfilling company needs.
+                                <hr color="#414a4c">
+ 								<a href="{% url 'contact' %}">
+  								<button style="background: transparent; border: transparent; background-color: #414a4c; border-radius: 5px; font-family: garamond; color: paleturquoise; text-align: center; font-size: 15px;">Contact Me</button>
+  								</a>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</head>
+</html>
+
+{% endblock %}

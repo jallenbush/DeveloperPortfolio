@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <meta name="description" content="simple CV example created with HTML and CSS">
+  <meta name="author" content="Fly Nerd">
+  <link rel="icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>    
+.button2 {
+  border-radius: 4px;
+  background-color: #232b2b;
+  border: none;
+  color: #414a4c;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px; 
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: center;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button2:hover span {
+  padding-right: 20px;
+}
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Jassmon Allen</h1>
+    <section>
+      <p style="color: ghostwhite;">Driven Computer Science graduate from Sam Houston State University with a strong foundation of software design, development, and testing. Experience using front end languages HTML, CSS, and JavaScript, as well as backend tools like Python, SQL, and Java. I am also familiar with frameworks such as Bootstrap and Django. I am seeking to utilize my broad educational background with proficient analytical, technical, and programming skills to succeed in an entry level software developer role.</p>
+    </section>
+  </header>
+  <main>
+    <section>
+      <h3>Education</h3>
+      <article>
+        <div class='school'>
+          <span>Spring 2022</span> <strong>Sam Houston State University</strong>
+        </div>
+        <div class="description">
+          Bachelor of Science in Computing Science
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Relevant Courses</h3>
+      <article class='course'>
+        <div class='title'>
+          <h4>COSC 3319 Data Structures & Algorithms</h4>
+        </div>
+        <div class="description">
+          <p>Studied topics such as strings, arrays, linked lists, multilinked structures, indexed and direct files, and generalized data management and database management systems.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>COSC 3327 Computer Architecture</h4>
+        </div>
+        <div class="description">
+          <p>Explored computer organization and architectures in more depth and breadth. Specific topics included milestones in the philosophy of computer design, Karnaugh maps for circuit minimization, memory types and organization, caching, pipelining, micro-architectures, parallel architectures, I/O devices, buses, and bus protocols.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>COSC 3331 Human-Computer Interaction</h4>
+        </div>
+        <div class="description">
+          <p>Comprehensive introduction to the principles and techniques of human-computer interaction. Examined the event-driven model through the development of applications utilizing graphical design environments and the use of rapid application prototyping to explore a variety of techniques for HCI, particularly in relation to mobile and other non-traditional devices.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>COSC 4319 Software Engineering</h4>
+        </div>
+        <div class="description">
+          <p>An introduction to formal methods of specifying, designing, implementing, and testing software for large programming projects. Methods of estimating and predicting reliability are discussed.</p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <div class='skills'>
+        <div class='column'>
+          <h3>Technical/Soft Skills</h3>
+          <ul>
+            <li>Python (proficient)</li>
+            <li>Java (proficient)</li>
+            <li>HTML5 (proficient) / CSS (proficient)</li>
+            <li>SQL (proficient)</li>
+            <li>Django / Bootstrap</li>
+            <li>Software Development</li>
+            <li>Excellent Analytical Problem-Solving Skills</li>
+            <li>Strong Collaborative Communication Skills</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Projects</h3>
+      <article>
+        <div class='project'>
+          <span>MAY 2022 - PRESENT </span> <strong style="color: paleturquoise;">Social Media Web Application:</strong><br> <strong style="color: paleturquoise;">Position:</strong> Independent Project
+        </div>
+        <div>
+          <p><strong style="color: paleturquoise;">Tech Stack:</strong> HTML5 / CSS / Python / Django</p>
+          <ul class="project-description">
+            <li>Social Media Web Application</li>
+            <li>Developed, programmed, and tested a social media responsive web application. Designed using Python and Django web framework. Application features include login/sign up, live news feed, add/delete followers, likes, and comments. Deploy by using Heroku cloud platform.</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <div class='project'>
+          <span>JULY 2022 - NOVEMBER.2022</span> <strong style="color: paleturquoise;">Game Project:</strong><br> <strong style="color: paleturquoise;">Position:</strong> Independent Project
+        </div>
+        <div>
+          <p><strong style="color: paleturquoise;">Tech Stack:</strong> Java / Eclipse</p>
+          <ul class="project-description">
+            <li>2D Retro Game</li>
+            <li>Developed a 2D retro game. Deployed using core Java based functions JFrame container, 2DGraphics API, and Action/Key Listener interface. Compiled using Eclipse IDE.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='project'>
+          <span>APRIL 2022 - APRIL 2022</span> <strong style="color: paleturquoise;">Air Quality Software:</strong><br> <strong style="color: paleturquoise;">Position:</strong> Independent Project
+        </div>
+        <div>
+          <p><strong style="color: paleturquoise;">Tech Stack:</strong> Python / Tkinter GUI</p>
+          <ul class="project-description">
+            <li>Developed Air Quality Software</li>
+            <li>Designed air quality software using standard GUI library Tkinter. Software connects to a 3rd party API to pull air quality data back to software.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+      <a class="button2" style="color: paleturquoise; width: 10px; height: 10px; padding-left: 10px; text-align: center; font-size: 20px; background: transparent; border: transparent; border-radius: 5px;" href="https://www.linkedin.com/in/jassmon-allen-629789186?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjGPsJfg2RFq9LDLITzrxQw%3D%3D" target="_blank" rel="noopener noreferrer"><span>Hire Me</span></a>
+  
+      <a class="button2" style="color: paleturquoise; width: 10px; height: 10px; padding-right: 80px; text-align: center; font-size: 20px; background: transparent; border: transparent; border-radius: 5px;" href="{% static 'website/files/jassmonAllenResume.pdf' %}" download="jassmonAllenResume" target="_blank" rel="noopener noreferrer"><span>Download Resume</span></a>
+  </footer>
+</body>
+</html>
+{% endblock %} 
