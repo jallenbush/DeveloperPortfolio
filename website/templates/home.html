@@ -18,7 +18,7 @@ body {
 
 .title {
   font-family: "garamond", sans-serif;
-  text-align: center;
+  text-align: right;
   color: #014760;
   display: flex;
   flex-direction: column;
@@ -36,9 +36,10 @@ h1 {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
-  font-size: 100vw;
+  text-align: right;
+  font-size: 10vw;
   margin: 10px 0;
-  padding-left: 50%;
+  padding-left: 35%;
   position: relative;
   animation: slide 5s infinite;
   animation-iteration-count: 1;
@@ -47,8 +48,8 @@ h1 {
 #name {animation-timing-function: linear;}
 
 @keyframes slide{
-  from {left: -100px;}
-  to {left: 0px;}
+  from {right: -90px;}
+  to {right: 20px;}
 }
 
 h2 {
@@ -61,33 +62,13 @@ h2 {
   text-align: right;
   font-size: 30px;
   margin: 10px 0;
-  padding-left: 53%;
+  padding-left: 55%;
   animation: blink 2s infinite;
   animation-delay: 3s;
 }
 @keyframes blink{
 	55%{color: #414a4c}
 }
-/* styling my button */
-
-.white-mode {
-  text-decoration: none;
-  padding: 7px 10px;
-  background-color: #107e57;
-  border-radius: 3px;
-  color: #014760;
-  transition: .35s ease-in-out;
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
-  font-family: "garamond";
-}
-
-.white-mode:hover {
-  background-color: #014760;
-  color: #107e57;
-}
-
 </style>
 
 <body>
